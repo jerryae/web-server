@@ -17,8 +17,9 @@ const forecast = (latitude, longitude, callback) => {
         callback('Unable to find location.', undefined);
       } else {
         const weather_description = data.current.weather_descriptions[0];
-        const temperature = data.current.weather_descriptions[0];
+        const temperature = data.current.temperature;
         const precipitation = data.current.precip;
+        const humidity = data.current.humidity;
         /* callback(undefined, {
           weatherDescription: weather_description,
           temperature: temperature,
@@ -26,7 +27,7 @@ const forecast = (latitude, longitude, callback) => {
         }); */
         callback(
           undefined,
-          `${data.current.weather_descriptions[0]}. It is currently ${data.current.temperature} degrees out. There is a ${data.current.precip}% chance of rain.`
+          `${weather_description}. It is currently ${temperature} degrees out. There is a ${precipitation}% chance of rain. The humidity is ${humidity}%.`
         );
       }
     }
