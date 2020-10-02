@@ -27,7 +27,7 @@ const forecast = (latitude, longitude, callback) => {
         }); */
         callback(
           undefined,
-          `${weather_description}. It is currently ${temperature} degrees out. There is a ${precipitation}% chance of rain. The humidity is ${humidity}%.`
+          `${weather_description}. It is currently ${temperature} degrees out. There is a ${precipitation}% chance of rain.\nThe humidity is ${humidity}%.`
         );
       }
     }
