@@ -71,7 +71,7 @@ app.get('/weather', (req, res) => {
 /* app.get('/products', (req, res) => {
   if (!req.query.search) {
     return res.send({
-      error:'You must provide searhc term in query'
+      error:'You must provide search term in query'
     });
   }
     res.send({
